@@ -14,13 +14,13 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
+  id    Int      @id @default(autoincrement())
+  email String   @unique
   name  String?
-  posts Post[]
+  posts Recipe[]
 }
 
-model Post {
+model Recipe {
   id        Int      @id @default(autoincrement())
   title     String
   content   String?
